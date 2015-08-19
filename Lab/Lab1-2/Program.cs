@@ -13,7 +13,13 @@ namespace Lab1_2
             bool flag = true;
 
             // input
-            int[] input = { 4, 5, 2, 8, 9, 1, 2, 4, 3, 1 };
+            string Sinput;
+            int[] input;
+
+            Console.WriteLine("Input the integers: ");
+            Sinput = Console.ReadLine();
+
+            input = Sinput.Split(' ').Select(n => Convert.ToInt32(n)).ToArray();
 
             // process
             while (flag)
