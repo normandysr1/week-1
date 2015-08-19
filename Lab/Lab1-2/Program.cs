@@ -10,18 +10,26 @@ namespace Lab1_2
     {
         static void Main(string[] args)
         {
-            bool flag = true;
+            inputFunc();
+        }
 
-            // input
+        static public void inputFunc()
+        {
             string Sinput;
-            int[] input;
 
             Console.WriteLine("Input the integers: ");
             Sinput = Console.ReadLine();
+            processFunc(Sinput);
+        }
 
+        static public void processFunc(string Sinput)
+        {
+            int[] input;
             input = Sinput.Split(' ').Select(n => Convert.ToInt32(n)).ToArray();
 
-            // process
+
+            bool flag = true;
+
             while (flag)
             {
                 flag = false;
@@ -37,7 +45,11 @@ namespace Lab1_2
                 }
             }
 
-            // output
+            outputFunc(input);
+        }
+
+        static public void outputFunc(int[] input)
+        {
             for (int i = 0; i != input.Length; i++)
             {
                 Console.Write(input[i]);
@@ -45,5 +57,6 @@ namespace Lab1_2
             }
             Console.ReadKey();
         }
+
     }
 }
