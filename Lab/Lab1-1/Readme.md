@@ -24,7 +24,7 @@ Answer: Move to next member in the array. It doesn't met the condition in line 2
 
 3. How many times at line 24 will be executed (as a function of the size of input) 
 
-Answer: 24 times.
+Answer: 27 times for small to large and 15 times for large to small.
 
 4. Why we need flag variable ? 
 
